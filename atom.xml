@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-08-17T08:10:42.853Z</updated>
+  <updated>2018-09-30T04:08:49.930Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,19 +17,20 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2018/08/17/hello-world/"/>
-    <id>http://yoursite.com/2018/08/17/hello-world/</id>
-    <published>2018-08-17T08:10:42.853Z</published>
-    <updated>2018-08-17T08:10:42.853Z</updated>
+    <title></title>
+    <link href="http://yoursite.com/2018/09/30/mastodon/"/>
+    <id>http://yoursite.com/2018/09/30/mastodon/</id>
+    <published>2018-09-30T04:08:49.930Z</published>
+    <updated>2018-09-30T04:08:49.930Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<p>-–</p><h2 id="title-how-to-deploy-your-own-mastodon-instance"><a href="#title-how-to-deploy-your-own-mastodon-instance" class="headerlink" title="title:how to deploy your own mastodon instance"></a>title:how to deploy your own mastodon instance</h2><p>Hi,this is tiasum.I’m a CS student in shanghai normal university.My life is looking for something real interesting.</p><h2 id="Development-environment"><a href="#Development-environment" class="headerlink" title="Development environment"></a>Development environment</h2><p>server version:fedora 27<br>docker version:v 1.13.1</p><p>###Prerequisites<br>-(+<em>)Nginx(or Apache2;not officially supported).-(+</em>)Recent stable version of Docker-(+*)Recent stable version of Docker-compose</p><p>###Setting up</p><p>Clone Mastodon’s repository</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/tootsuite/mastodon.git</span><br></pre></td></tr></table></figure><p>Checkout to the lastest stable branch<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout $(git tag -l | grep -v <span class="string">'rc[0-9]*$'</span> |sort -V |tail -n -1)</span><br></pre></td></tr></table></figure></p><p>Review the settings in docker-compose.yml.</p><p>###</p><p>your instance is identified by its domain name.Changing it afterward wiil break things.<br>Domain name:/tiasum.top your domain name</p><p>single user mode disable registrations and redirects the landing page to your public profile.<br>do you what to enable single user mode? no</p><p>are you using docker to run mastodon? yes</p><p>postgresql:tiasum<br>postsql port:888<br>name of postgresql database:shanghai<br>name of postgresql user:postgresql<br>password for database:</p><p>###bundler<br>ruby gems</p><h3 id="postgresql"><a href="#postgresql" class="headerlink" title="postgresql"></a>postgresql</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dnf install postgresql</span><br></pre></td></tr></table></figure><p>default /var/lib/pgsql</p><p>auth chown postgres /var/lib/pgsql/data<br>add user<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">useradd postgres</span><br><span class="line">passwd postgres</span><br></pre></td></tr></table></figure></p><p>make a dir for data</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+        &lt;p&gt;-–&lt;/p&gt;
+&lt;h2 id=&quot;title-how-to-deploy-your-own-mastodon-instance&quot;&gt;&lt;a href=&quot;#title-how-to-deploy-your-own-mastodon-instance&quot; class=&quot;headerlin
       
     
     </summary>
