@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-11-12T11:43:20.958Z</updated>
+  <updated>2018-11-12T12:02:18.969Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>test</title>
+    <link href="http://yoursite.com/2018/11/12/test/"/>
+    <id>http://yoursite.com/2018/11/12/test/</id>
+    <published>2018-11-12T12:00:28.000Z</published>
+    <updated>2018-11-12T12:02:18.969Z</updated>
+    
+    <content type="html"><![CDATA[<p>hi,i’m tiasum</p><h1 id="H1"><a href="#H1" class="headerlink" title="H1"></a>H1</h1><h2 id="H2"><a href="#H2" class="headerlink" title="H2"></a>H2</h2><p>###H3</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;hi,i’m tiasum&lt;/p&gt;
+&lt;h1 id=&quot;H1&quot;&gt;&lt;a href=&quot;#H1&quot; class=&quot;headerlink&quot; title=&quot;H1&quot;&gt;&lt;/a&gt;H1&lt;/h1&gt;&lt;h2 id=&quot;H2&quot;&gt;&lt;a href=&quot;#H2&quot; class=&quot;headerlink&quot; title=&quot;
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>how to deploy your own mastodon instance</title>
