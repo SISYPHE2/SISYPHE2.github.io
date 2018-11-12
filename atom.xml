@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-09-30T04:08:49.930Z</updated>
+  <updated>2018-11-12T11:43:20.958Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,24 +17,30 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
-    <link href="http://yoursite.com/2018/09/30/mastodon/"/>
-    <id>http://yoursite.com/2018/09/30/mastodon/</id>
-    <published>2018-09-30T04:08:49.930Z</published>
-    <updated>2018-09-30T04:08:49.930Z</updated>
+    <title>how to deploy your own mastodon instance</title>
+    <link href="http://yoursite.com/2018/11/12/mastodon/"/>
+    <id>http://yoursite.com/2018/11/12/mastodon/</id>
+    <published>2018-11-12T11:43:20.958Z</published>
+    <updated>2018-11-12T11:43:20.958Z</updated>
     
-    <content type="html"><![CDATA[<p>-–</p><h2 id="title-how-to-deploy-your-own-mastodon-instance"><a href="#title-how-to-deploy-your-own-mastodon-instance" class="headerlink" title="title:how to deploy your own mastodon instance"></a>title:how to deploy your own mastodon instance</h2><p>Hi,this is tiasum.I’m a CS student in shanghai normal university.My life is looking for something real interesting.</p><h2 id="Development-environment"><a href="#Development-environment" class="headerlink" title="Development environment"></a>Development environment</h2><p>server version:fedora 27<br>docker version:v 1.13.1</p><p>###Prerequisites<br>-(+<em>)Nginx(or Apache2;not officially supported).-(+</em>)Recent stable version of Docker-(+*)Recent stable version of Docker-compose</p><p>###Setting up</p><p>Clone Mastodon’s repository</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/tootsuite/mastodon.git</span><br></pre></td></tr></table></figure><p>Checkout to the lastest stable branch<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout $(git tag -l | grep -v <span class="string">'rc[0-9]*$'</span> |sort -V |tail -n -1)</span><br></pre></td></tr></table></figure></p><p>Review the settings in docker-compose.yml.</p><p>###</p><p>your instance is identified by its domain name.Changing it afterward wiil break things.<br>Domain name:/tiasum.top your domain name</p><p>single user mode disable registrations and redirects the landing page to your public profile.<br>do you what to enable single user mode? no</p><p>are you using docker to run mastodon? yes</p><p>postgresql:tiasum<br>postsql port:888<br>name of postgresql database:shanghai<br>name of postgresql user:postgresql<br>password for database:</p><p>###bundler<br>ruby gems</p><h3 id="postgresql"><a href="#postgresql" class="headerlink" title="postgresql"></a>postgresql</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dnf install postgresql</span><br></pre></td></tr></table></figure><p>default /var/lib/pgsql</p><p>auth chown postgres /var/lib/pgsql/data<br>add user<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">useradd postgres</span><br><span class="line">passwd postgres</span><br></pre></td></tr></table></figure></p><p>make a dir for data</p>]]></content>
+    <content type="html"><![CDATA[<p>Hi,this is tiasum.I’m a CS student in shanghai normal university.My life is looking for something real interesting.</p><h2 id="Development-environment"><a href="#Development-environment" class="headerlink" title="Development environment"></a>Development environment</h2><p>server version:fedora 27<br>docker version:v 1.13.1</p><h3 id="Prerequisites"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites</h3><p>-(+<em>)Nginx(or Apache2;not officially supported).-(+</em>)Recent stable version of Docker-(+*)Recent stable version of Docker-compose</p><h3 id="Setting-up"><a href="#Setting-up" class="headerlink" title="Setting up"></a>Setting up</h3><p>Clone Mastodon’s repository</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/tootsuite/mastodon.git</span><br></pre></td></tr></table></figure><p>Checkout to the lastest stable branch<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout $(git tag -l | grep -v <span class="string">'rc[0-9]*$'</span> |sort -V |tail -n -1)</span><br></pre></td></tr></table></figure></p><p>Review the settings in docker-compose.yml.</p><h3 id="progress"><a href="#progress" class="headerlink" title="progress"></a>progress</h3><p>your instance is identified by its domain name.Changing it afterward wiil break things.<br>Domain name:/tiasum.top your domain name</p><p>single user mode disable registrations and redirects the landing page to your public profile.<br>do you what to enable single user mode? no</p><p>are you using docker to run mastodon? yes</p><p>postgresql:tiasum<br>postsql port:888<br>name of postgresql database:shanghai<br>name of postgresql user:postgresql<br>password for database:</p><h3 id="bundler"><a href="#bundler" class="headerlink" title="bundler"></a>bundler</h3><p>ruby gems</p><h3 id="postgresql"><a href="#postgresql" class="headerlink" title="postgresql"></a>postgresql</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dnf install postgresql</span><br></pre></td></tr></table></figure><p>default /var/lib/pgsql</p><p>auth chown postgres /var/lib/pgsql/data<br>add user<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">useradd postgres</span><br><span class="line">passwd postgres</span><br></pre></td></tr></table></figure></p><p>make a dir for data</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;-–&lt;/p&gt;
-&lt;h2 id=&quot;title-how-to-deploy-your-own-mastodon-instance&quot;&gt;&lt;a href=&quot;#title-how-to-deploy-your-own-mastodon-instance&quot; class=&quot;headerlin
+        &lt;p&gt;Hi,this is tiasum.I’m a CS student in shanghai normal university.My life is looking for something real interesting.&lt;/p&gt;
+&lt;h2 id=&quot;Developme
       
     
     </summary>
     
+      <category term="mastodon" scheme="http://yoursite.com/categories/mastodon/"/>
+    
+    
+      <category term="mastodon" scheme="http://yoursite.com/tags/mastodon/"/>
+    
+      <category term="tutorial" scheme="http://yoursite.com/tags/tutorial/"/>
     
   </entry>
   
