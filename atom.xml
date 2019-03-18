@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-11-12T11:43:20.958Z</updated>
+  <updated>2019-03-18T14:18:09.863Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Love,death and robots</title>
+    <link href="http://yoursite.com/2019/03/18/robots/"/>
+    <id>http://yoursite.com/2019/03/18/robots/</id>
+    <published>2019-03-18T14:18:09.863Z</published>
+    <updated>2019-03-18T14:18:09.863Z</updated>
+    
+    <content type="html"><![CDATA[<p>The new series of Netflix ‘Love,death and robots’ get pursued and admired by chinese audiences in recent days.The series has 18 episodes,and each episode te$</p><p>differents stories.After reviewing nine episodes,i must say that the episode is not as great as how people told us to be.However,there are more and more peo$</p><p>choose to fllow the trend,share review in their social media and rate highly in Douban.</p><p>The situtation is quiet like when another Netflix’s movie ‘roma’ got a hit in chinese audiences.As far as i seen,both plays is a good project,but they didn’t</p><p>suppose to get so much attention by the normal auidences.First of all,the background of the story is so far from us.Secondly,the cultural differences are su$</p><p>a great barrier between us and the dirctor.Last but not least,we can’t deny that as a commerial stream media,the Netflix,always tend to make products which</p><p>were directed to its consumers.While,as we all konwn,the chinese audiences,for some reason,can’t be its consumers.</p><p>In a nutshell,it’s quiet odd for me that the Netflix’s plays get so much attention in chinese market.As a commerial organization,what the Netflix doing is</p><p>trying to make the ‘global topic’ in their consumers despite of the geographical and cultural differences.As chinese audiences,the great leap in both economy</p><p>and culture make them have a stronge desire to get into this ‘global topic’,which make the ‘Love,death and robots’ and ‘roma’ so popular in china.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;The new series of Netflix ‘Love,death and robots’ get pursued and admired by chinese audiences in recent days.The series has 18 episodes,
+      
+    
+    </summary>
+    
+      <category term="movie" scheme="http://yoursite.com/categories/movie/"/>
+    
+    
+      <category term="movie" scheme="http://yoursite.com/tags/movie/"/>
+    
+      <category term="netflix" scheme="http://yoursite.com/tags/netflix/"/>
+    
+  </entry>
   
   <entry>
     <title>how to deploy your own mastodon instance</title>
